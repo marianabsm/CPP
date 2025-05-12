@@ -6,7 +6,7 @@
 /*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 14:48:49 by marianamest       #+#    #+#             */
-/*   Updated: 2025/05/05 15:42:58 by marianamest      ###   ########.fr       */
+/*   Updated: 2025/05/07 16:59:01 by marianamest      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	PhoneBook::add(void)
 	int i = 0;
 	std::string	tmp[5];
 
-	this->index = this->index % 8;
-	this->status[this->index] = true;
+	this->index = this->index % 8; 
+	this->status[this->index] = true; // 
 	while (i < 5)
 	{
 		if (i == 0)
@@ -42,7 +42,7 @@ void	PhoneBook::add(void)
 			std::cout << "Phone Number: ";
 		if (i == 4)
 			std::cout << "Darkest Secret: ";
-		getline(std::cin, tmp[i]);
+		getline(std::cin, tmp[i]); // 
 		if (tmp[i].empty())
 		{
             std::cout << std::endl;
