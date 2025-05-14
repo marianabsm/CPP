@@ -6,7 +6,7 @@
 /*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 19:29:56 by marianamest       #+#    #+#             */
-/*   Updated: 2025/05/12 20:17:34 by marianamest      ###   ########.fr       */
+/*   Updated: 2025/05/13 14:36:49 by marianamest      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,4 @@ void Zombie::zombieName(std :: string name)
 {
     this->_name = name;
 }
+ 

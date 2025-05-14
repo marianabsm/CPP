@@ -5,21 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/07 17:38:26 by marianamest       #+#    #+#             */
-/*   Updated: 2025/05/13 14:17:23 by marianamest      ###   ########.fr       */
+/*   Created: 2025/05/14 15:13:45 by marianamest       #+#    #+#             */
+/*   Updated: 2025/05/14 15:20:04 by marianamest      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-int main(void)
+int main ()
 {
-    Zombie *myZombie = newZombie("myZombie"); 
-    myZombie->announce();
-    
-    randomChump("Nana");
+    {
+        Weapon club = Weapon("crude spiked club");
+        
+        HumanA bob("Bob", club);
+        bob.attack();
+        club.setType("some other type of club");
+        bob.attack();
+    }
+    {
+        Weapon club = Weapon("crude spiked club");
 
-    delete myZombie; // deallocates memory when done
-    
+        HumanB jim("Jim");
+        jim.setWeapon(club);
+        jim.attack();
+        club.setType("some other type of club");
+        jim.attack();
+    }
     return (0);
 }

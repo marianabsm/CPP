@@ -6,7 +6,7 @@
 /*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 14:48:49 by marianamest       #+#    #+#             */
-/*   Updated: 2025/05/07 16:59:01 by marianamest      ###   ########.fr       */
+/*   Updated: 2025/05/13 14:00:57 by marianamest      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ void	PhoneBook::add(void)
 		if (i == 4)
 			std::cout << "Darkest Secret: ";
 		getline(std::cin, tmp[i]); // 
+		if(std::cin.eof())
+			break;
 		if (tmp[i].empty())
 		{
             std::cout << std::endl;
@@ -78,7 +80,7 @@ void	PhoneBook::search(void)
 	{
 		std::cout << "Select index:" << std::endl;
 		getline(std::cin, input);
-		if (input.empty() == 0)
+		if (input.empty() == 0 || std::cin.eof())
 			break;
 	}
 	contact = input[0];

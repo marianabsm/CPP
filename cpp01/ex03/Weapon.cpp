@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 20:20:18 by marianamest       #+#    #+#             */
-/*   Updated: 2025/05/13 14:23:06 by marianamest      ###   ########.fr       */
+/*   Created: 2025/05/14 15:25:02 by marianamest       #+#    #+#             */
+/*   Updated: 2025/05/14 15:26:41 by marianamest      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIES_HPP
-#define ZOMBIES_HPP
+#include "Weapon.hpp"
 
-#include <iostream>
-#include <string>
-
-class Zombie
+Weapon::Weapon(std::string type)
 {
-    private:
-        std :: string _name;
+    this->type = type;
+}
 
-    public:
-    Zombie();
-    ~Zombie();
-    void announce();
-	void zombieName(std :: string name); // setName change function name
-};
+Weapon::~Weapon()
+{
+    return;
+}
 
-Zombie* zombieHorde( int N, std::string name );
+const std::string &Weapon::getType()
+{
+    return(this->type);
+}
 
-#endif
+void Weapon::setType(const std::string &type)
+{
+    this->type = type;
+}

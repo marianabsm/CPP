@@ -6,7 +6,7 @@
 /*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 14:48:46 by marianamest       #+#    #+#             */
-/*   Updated: 2025/05/05 15:39:16 by marianamest      ###   ########.fr       */
+/*   Updated: 2025/05/13 13:58:51 by marianamest      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int main(void)
     {
         std::cout << "Choose command: ADD / SEARCH / EXIT" << std::endl;
         std::getline(std::cin, input);
+        if (std::cin.eof())
+            break;
 
         if (input == "ADD")
             phoneBook.add();
